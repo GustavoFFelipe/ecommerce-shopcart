@@ -1,13 +1,13 @@
 .header{
-    width: 100%;
+    width: 90vw;
     height: 70px;
     line-height: 70px;
-    margin-bottom: 10rem;
+    margin: 0 auto;
 }
 .nav__wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .logo{
     display: flex;

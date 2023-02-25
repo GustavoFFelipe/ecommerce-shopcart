@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Container, Row} from 'reactstrap';
-import {motion} from 'framer-motion'
 
 import './services.css'
 

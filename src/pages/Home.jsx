@@ -8,6 +8,7 @@ import '../styles/home.css';
 import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom';
 import Services from '../Services/Services';
+import ProductsList from '../components/UI/ProductsList';
 
 const Home = () => {
 
@@ -38,6 +39,16 @@ const Home = () => {
             </Container>
         </section>
         <Services />
+        <section className="trending__products">
+            <Container>
+                <Row>
+                    <div className="colContainer">
+                        <h2 className="section__title">Produtos em alta</h2>
+                    </div>
+                    <ProductsList />
+                </Row>
+            </Container>
+        </section>
     </Helmet>
 
     

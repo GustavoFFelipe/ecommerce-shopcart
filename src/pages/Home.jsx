@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState, useEffect} from 'react';
 
 import Helmet from '../components/Helmet/Helmet'
 
@@ -8,9 +9,23 @@ import '../styles/home.css';
 import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom';
 import Services from '../Services/Services';
+import products from '../assets/data/products';
 import ProductsList from '../components/UI/ProductsList';
 
+
+
 const Home = () => {
+    const [dataTrending, setDataTrending] = useState(products);
+    useEffect(() =>{
+        const filteredProducts = products.filter(item => item.category === 'chair')
+        setDataTrending(filteredProducts);
+    }, [])
+
+    const [dataBestSell, setDataBestSell] = useState(products);
+    useEffect(() =>{
+        const filteredProducts = products.filter(item => item.category === 'sofa')
+        setDataBestSell(filteredProducts);
+    }, [])
 
     const year = new Date().getFullYear();
     return (
@@ -45,7 +60,17 @@ const Home = () => {
                     <div className="colContainer">
                         <h2 className="section__title">Produtos em alta</h2>
                     </div>
-                    <ProductsList />
+                    <ProductsList data={dataTrending} />
+                </Row>
+            </Container>
+        </section>
+        <section>
+            <Container>
+            <Row>
+                    <div className="colContainer">
+                        <h2 className="section__title">Mais vendidos</h2>
+                    </div>
+                    <ProductsList data={dataBestSell} />
                 </Row>
             </Container>
         </section>

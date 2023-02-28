@@ -1,0 +1,50 @@
+.footer{
+    background: var(--primary-color);
+    color: #fff;
+    height: 100%;
+}
+.footer .logo h1{
+    color: #fff;
+}
+.footer .logo i{
+    font-size: 40px;
+}
+.footerContainer{
+    margin: 0 auto;
+    height: 100%;
+    padding: 20px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link{
+    width: 30%;
+    margin: 10px auto;
+    border-bottom: 1px solid transparent;
+}
+.link:hover{
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    transition: .2s;
+}
+.contact{
+    margin: 4px auto;
+}
+.contact:first-child{
+    margin-top:0px;
+}
+.contact:last-child{
+    margin-bottom:30px;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.copy{
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+}

@@ -33,9 +33,9 @@ const Header = () => {
         <Row>
           <div className="nav__wrapper">
             <div className="logo">
-              <img src={logo} alt="Logo da ShopCart" />
-              <div>
-                <h1>ShopCart</h1>
+              <div className='logoContainer'>
+                <i class="ri-cloud-line"></i>
+                <h1 className='header-title'>ShopCart</h1>
               </div>
             </div>
 

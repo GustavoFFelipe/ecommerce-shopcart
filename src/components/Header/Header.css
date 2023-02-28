@@ -4,6 +4,17 @@
     line-height: 70px;
     margin: 0 auto;
 }
+.logoContainer{
+    display: flex;
+    gap:10px;
+}
+.logoContainer i {
+    font-size: 25px;
+}
+.header-title{
+    color: #000;
+    
+}
 .nav__wrapper{
     display: flex;
     align-items: center;

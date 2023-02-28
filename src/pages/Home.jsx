@@ -18,13 +18,17 @@ import counterImg from '../assets/images/counter-timer-img.png';
 
 const Home = () => {
     const [dataTrending, setDataTrending] = useState([]);
-    const [dataBestSell, setDataBestSell] = useState(products);
-
+    const [dataBestSell, setDataBestSell] = useState([]);
+    const [newArrivels, setNewArrivels] = useState([]);
     useEffect(() =>{
         const filteredTrandingProducts = products.filter(item => item.category === 'chair')
 
         const filteredBestSalesProducts = products.filter(item => item.category === 'sofa')
 
+        const filteredNewArrivels = products.filter(item => item.category === 'mobile');
+
+
+        setNewArrivels(filteredNewArrivels);
         setDataTrending(filteredTrandingProducts);
         setDataBestSell(filteredBestSalesProducts);
     }, [])
@@ -78,7 +82,7 @@ const Home = () => {
             </Container>
         </section>
 
-        <section>
+        <section className='timer__section'>
             <Container>
                 <Row className='timer__count'>
                     <div className='counter'>
@@ -94,6 +98,19 @@ const Home = () => {
                     <div  className="colContainer__img">
                         <img src={counterImg} alt="" />
                     </div >
+                </Row>
+            </Container>
+        </section>
+
+        <section className="new__arrivals">
+            <Container>
+                <Row>
+                <div className="colContainer">
+                        <h2 className="section__title">Novidades no ar</h2>
+                </div>
+                <div className='new'>
+                <ProductsList data={newArrivels} />
+                </div>
                 </Row>
             </Container>
         </section>

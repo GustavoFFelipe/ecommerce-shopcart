@@ -1,0 +1,25 @@
+.clock__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto 0 auto;
+}
+.clock__data{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.clock__data h1 {
+    color: #fff;
+    font-size: 25px;
+}
+.clock__data h5{
+    font-size: 15px;
+    color: #fff;
+}
+.clock__text{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}

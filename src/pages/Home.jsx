@@ -11,21 +11,24 @@ import { Link } from 'react-router-dom';
 import Services from '../Services/Services';
 import products from '../assets/data/products';
 import ProductsList from '../components/UI/ProductsList';
+import Clock from '../components/UI/Clock';
+import counterImg from '../assets/images/counter-timer-img.png';
 
 
 
 const Home = () => {
-    const [dataTrending, setDataTrending] = useState(products);
+    const [dataTrending, setDataTrending] = useState([]);
+    const [dataBestSell, setDataBestSell] = useState(products);
+
     useEffect(() =>{
-        const filteredProducts = products.filter(item => item.category === 'chair')
-        setDataTrending(filteredProducts);
+        const filteredTrandingProducts = products.filter(item => item.category === 'chair')
+
+        const filteredBestSalesProducts = products.filter(item => item.category === 'sofa')
+
+        setDataTrending(filteredTrandingProducts);
+        setDataBestSell(filteredBestSalesProducts);
     }, [])
 
-    const [dataBestSell, setDataBestSell] = useState(products);
-    useEffect(() =>{
-        const filteredProducts = products.filter(item => item.category === 'sofa')
-        setDataBestSell(filteredProducts);
-    }, [])
 
     const year = new Date().getFullYear();
     return (
@@ -71,6 +74,26 @@ const Home = () => {
                         <h2 className="section__title">Mais vendidos</h2>
                     </div>
                     <ProductsList data={dataBestSell} />
+                </Row>
+            </Container>
+        </section>
+
+        <section>
+            <Container>
+                <Row className='timer__count'>
+                    <div className='counter'>
+                        <div className="clock__top-content">
+                            <h3 className='text-white-title'>Ofertas por tempo limitado</h3>
+                            <h4 className='text-white'>Qualidade imperdivel</h4>
+                        </div>
+                        <Clock />
+
+                        <Link to='/shop'><motion.button whileTap={{scale: 2}} className="buy__btn buy__btn-offer">Visite a loja</motion.button></Link>
+                    </div>
+
+                    <div  className="colContainer__img">
+                        <img src={counterImg} alt="" />
+                    </div >
                 </Row>
             </Container>
         </section>

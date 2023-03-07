@@ -21,12 +21,13 @@
 .link{
     width: 30%;
     margin: 10px auto;
+    padding-bottom: 5px;
     border-bottom: 1px solid transparent;
 }
 .link:hover{
-    color: var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid #fff;
     transition: .2s;
+    
 }
 .contact{
     margin: 4px auto;
@@ -44,7 +45,8 @@
 }
 .copy{
     width: 90vw;
+    height: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }

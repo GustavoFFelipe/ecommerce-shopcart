@@ -111,3 +111,14 @@
     color: #fff;
     transition: .2s;
 }
+
+@media (max-width: 425px) {
+    .row__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clock__top-content{
+        padding-top: 10px;
+    }
+}

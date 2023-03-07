@@ -22,3 +22,10 @@
 .service__item span i{
     font-size: 3rem;
 }
+
+@media(max-width:425px){
+    .columns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
